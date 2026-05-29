@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acercarnos Solutions, LLC | Evaluation & Ecology Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f1923;
+            color: #cbd5e0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #0a1628;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 2px solid #2a4a7f;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #e2e8f0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #7fa8d4;
+        }
+
+        nav {
+            background: #0d1f3c;
+            padding: 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid #1e3a5f;
+        }
+
+        nav a {
+            color: #90b8e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 3rem 12%;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            color: #7fa8d4;
+            border-bottom: 2px solid #1e3a5f;
+            padding-bottom: 0.5rem;
+        }
+
+        .card {
+            background: #1a2a3f;
+            padding: 2rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            border: 1px solid #1e3a5f;
+        }
+
+        ul {
+            margin-left: 1rem;
+        }
+
+        ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #90b8e0;
+        }
+
+        /* Team profiles side-by-side */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-card {
+            background: #1a2a3f;
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            border: 1px solid #1e3a5f;
+        }
+
+        /* Headshot image styling */
+        .profile-card .headshot {
+            display: block;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            margin: 0 auto 1.25rem auto;
+            border: 4px solid #4a7ab5;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+        }
+
+        .profile-card h3 {
+            color: #a8c8e8;
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+            text-align: center;
+        }
+
+        .profile-card .title {
+            color: #6a9fc0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #1e3a5f;
+            text-align: center;
+        }
+
+        /* Two-column expertise/services layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .two-col .card {
+            margin-bottom: 0;
+        }
+
+        .two-col .card h3 {
+            color: #a8c8e8;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid #1e3a5f;
+        }
+
+        /* Services categories */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-category {
+            background: #1a2a3f;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            border: 1px solid #1e3a5f;
+        }
+
+        .service-category h3 {
+            color: #a8c8e8;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid #1e3a5f;
+        }
+
+        a {
+            color: #6aade0;
+        }
+
+        a:hover {
+            color: #90c8f0;
+        }
+
+        footer {
+            background: #0a1628;
+            color: #7fa8d4;
+            text-align: center;
+            padding: 1.2rem;
+            margin-top: 2rem;
+            border-top: 2px solid #1e3a5f;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 2rem 6%;
+            }
+            .team-grid,
+            .two-col,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Acercarnos Solutions, LLC</h1>
+    <p>Independent Consulting in Program Evaluation &amp; Coastal Ecology</p>
+</header>
+
+<nav>
+    <a href="#about">About Us</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#services">Services</a>
+    <a href="#approach">Approach</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT / TEAM -->
+<section id="about">
+    <h2>Our Team</h2>
+    <div class="team-grid">
+
+        <!-- Corey -->
+        <div class="profile-card">
+            <img class="headshot" src="corey-headshot.jpg" alt="Headshot of Corey Payne, PhD">
+            <h3>Corey Payne, PhD</h3>
+            <p class="title">Independent Program Evaluation Consultant<br>Specializing in Federally Funded Higher Education Initiatives</p>
+            <p>
+                I am an independent program evaluation consultant with extensive experience 
+                supporting federally funded higher education initiatives, including 
+                Department of Education–aligned grants. I partner with universities and 
+                cross-institutional teams to design and implement rigorous formative and 
+                summative evaluation frameworks that strengthen program effectiveness and 
+                ensure federal compliance.
+            </p>
+            <br>
+            <p>
+                I have led large-scale evaluations across multi-institution partnerships, 
+                including Minority Serving Institutions, with responsibility for evaluation 
+                design, instrument development, data collection, analysis, and reporting. 
+                My work supports grant competitiveness, performance metric alignment, and 
+                actionable continuous improvement.
+            </p>
+        </div>
+
+        <!-- Julie -->
+        <div class="profile-card">
+            <img class="headshot" src="julie-headshot.jpg" alt="Headshot of Julie Walker, PhD">
+            <h3>Julie Walker, PhD</h3>
+            <p class="title">Interdisciplinary Ecologist &amp; Coastal Ecosystem Specialist<br>Program Manager, MassMarsh</p>
+            <p>
+                I am an interdisciplinary ecologist specializing in coastal ecosystems, 
+                with a focus on how climate change and human modifications influence the 
+                structure, function, and resilience of saltmarsh and mangrove systems. 
+                My research integrates field-based studies, geospatial analysis, and 
+                historical data to assess ecosystem vulnerability to sea-level rise and 
+                inform adaptive management strategies.
+            </p>
+            <br>
+            <p>
+                My work spans academia, government, and applied management contexts. 
+                In my current role as Program Manager for the MassMarsh program, I lead 
+                an interdisciplinary network of academic, NGO, and government partners 
+                to support coordinated monitoring and management of Massachusetts salt 
+                marshes. My earlier experience with the Chesapeake Bay Program and as a 
+                Visiting Assistant Professor reflects my commitment to science communication, 
+                education, and the integration of research into policy and practice.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+    <h2>Areas of Expertise</h2>
+    <div class="two-col">
+
+        <div class="card">
+            <h3>Corey Payne, PhD — Program Evaluation</h3>
+            <ul>
+                <li>Mixed-method evaluation design</li>
+                <li>Qualitative and quantitative data analysis</li>
+                <li>Survey and instrument development</li>
+                <li>Structured stakeholder interviews</li>
+                <li>Longitudinal outcome tracking</li>
+                <li>Alignment with Department of Education performance indicators</li>
+                <li>Federal reporting compliance and documentation</li>
+                <li>Clear, actionable evaluation reporting for institutional leadership</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Julie Walker, PhD — Coastal Ecology</h3>
+            <ul>
+                <li>Coastal wetland ecology (saltmarsh &amp; mangrove systems)</li>
+                <li>Climate change impacts and sea-level rise vulnerability</li>
+                <li>Geospatial analysis (Esri ArcGIS Online &amp; Pro)</li>
+                <li>Field-based ecological research and monitoring design</li>
+                <li>Nature-based solutions and restoration planning</li>
+                <li>Stakeholder engagement and coalition building</li>
+                <li>Science communication and technical writing</li>
+                <li>Interdisciplinary program coordination</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2>Services</h2>
+
+    <div class="services-grid">
+
+        <div class="service-category">
+            <h3>Program Evaluation</h3>
+            <ul>
+                <li><span class="highlight">Formative and summative evaluation design</span></li>
+                <li><span class="highlight">Evaluation methodology for federal grant proposals</span></li>
+                <li><span class="highlight">Title III, Title V, TRIO &amp; related program evaluation</span></li>
+                <li><span class="highlight">Quantitative and qualitative data analysis</span></li>
+                <li><span class="highlight">Stakeholder engagement &amp; interview design</span></li>
+                <li><span class="highlight">Performance metric alignment &amp; federal reporting</span></li>
+                <li><span class="highlight">Action-oriented evaluation reporting</span></li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Geospatial &amp; Innovative Technologies</h3>
+            <ul>
+                <li><span class="highlight">GIS mapping and geospatial analysis (ArcGIS Online &amp; Pro)</span></li>
+                <li><span class="highlight">Data hubs and interactive dashboards</span></li>
+                <li><span class="highlight">StoryMaps development</span></li>
+                <li><span class="highlight">Geodatabase design and management</span></li>
+                <li><span class="highlight">Database design using Excel, Access, and SQL Server</span></li>
+                <li><span class="highlight">Data management plan development</span></li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Research &amp; Scientific Synthesis</h3>
+            <ul>
+                <li><span class="highlight">Literature reviews and synthesis of best available science</span></li>
+                <li><span class="highlight">Data reviews, assessments, and gap analyses</span></li>
+                <li><span class="highlight">White paper development</span></li>
+                <li><span class="highlight">Statistical analysis (R, SPSS)</span></li>
+                <li><span class="highlight">Qualitative analysis and conceptual modeling</span></li>
+                <li><span class="highlight">Ecological &amp; social experimental design</span></li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Data Collection</h3>
+            <ul>
+                <li><span class="highlight">Monitoring plan development</span></li>
+                <li><span class="highlight">Restoration permitting and planning support</span></li>
+                <li><span class="highlight">Online, mail, and in-person surveys</span></li>
+                <li><span class="highlight">Structured interviews and focus groups</span></li>
+                <li><span class="highlight">Participatory mapping</span></li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Stakeholder Engagement &amp; Facilitation</h3>
+            <ul>
+                <li><span class="highlight">Partnership development and trust mapping</span></li>
+                <li><span class="highlight">Coalition building</span></li>
+                <li><span class="highlight">Process facilitation and concept mapping</span></li>
+                <li><span class="highlight">Logic modeling</span></li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Communications &amp; Scientific Writing</h3>
+            <ul>
+                <li><span class="highlight">Science communication for diverse audiences</span></li>
+                <li><span class="highlight">Technical report writing and review</span></li>
+                <li><span class="highlight">Copy editing and proofreading</span></li>
+                <li><span class="highlight">Citation management</span></li>
+                <li><span class="highlight">Website design and management</span></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+    <h2>Collaborative Approach</h2>
+    <div class="card">
+        <p>
+            We collaborate with project leadership from proposal development through 
+            implementation, serving as lead evaluators and research partners to design, 
+            execute, and report on activities that strengthen institutional capacity and 
+            demonstrate measurable program impact.
+        </p>
+        <br>
+        <p>
+            Our frameworks prioritize methodological rigor, alignment with federal 
+            performance measures, and practical utility for continuous program improvement. 
+            By combining expertise in program evaluation, coastal ecology, geospatial 
+            analysis, and stakeholder engagement, we offer an interdisciplinary perspective 
+            uniquely suited to complex, multi-partner initiatives.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="two-col">
+
+        <div class="card">
+            <h3 style="color: #a8c8e8;">Corey Payne, PhD</h3>
+            <br>
+            <p><strong>Email:</strong> corey@acercarnos.org</p>
+            <p><strong>Phone:</strong> (240) 925-8602</p>
+            <p><strong>Location:</strong> Gainesville, Florida</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/corey-payne-phd-216179226" target="_blank">linkedin.com/in/corey-payne-phd-216179226</a></p>
+        </div>
+
+        <div class="card">
+            <h3 style="color: #a8c8e8;">Julie Walker, PhD</h3>
+            <br>
+            <p><strong>Email:</strong> julie@acercarnos.org</p>
+            <p><strong>Phone:</strong> (240) 434-2215</p>
+            <p><strong>Locations:</strong> Florida, North Carolina &amp; Massachusetts</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/julie-walker-4794285b/" target="_blank">linkedin.com/in/julie-walker-4794285b</a></p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Acercarnos Solutions, LLC | Independent Evaluation &amp; Ecology Consulting</p>
+</footer>
+
+</body>
+</html>
